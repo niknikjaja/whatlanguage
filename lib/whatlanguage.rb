@@ -4,7 +4,7 @@ require 'digest/sha1'
 class WhatLanguage
   VERSION = '1.0.3'
 
-  HASHER = lambda { |item|  p item.inspect;  Digest::SHA1.digest(item.downcase.strip).unpack("VV") }
+  HASHER = lambda { |item| Digest::SHA1.digest(item.downcase.strip).unpack("VV") }
 
   BITFIELD_WIDTH = 2_000_000
 
